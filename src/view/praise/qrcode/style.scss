@@ -1,0 +1,57 @@
+@import "../../../assets/style/praise.scss";
+.pr-bg-img{
+  width: 100%;
+  @extend .fixedAll;
+  background: url("../../../assets/img/praise/qrcodeBg@3x.png") no-repeat top center;
+  height: 100%;
+  background-size: contain;
+}
+.pr-code-box{
+  width: px2rem(500px);
+  height: px2rem(500px);
+  border-radius: px2rem(40px);
+  background-color: $white;
+  margin-top: px2rem(310px);
+  @extend .pr-flex;
+  @include pr-flex-center;
+  @include pr-align-center;
+  .pr-code{
+    width: px2rem(460px);
+    height: px2rem(460px);
+  }
+}
+.pr-center{
+  margin-top: px2rem(30px);
+  p{
+    text-align: center;
+    &.b-c-text{
+      font-size: $fz-20;
+      color: $white;
+    };
+    &.b-c-num{
+      font-size: $fz-20;
+      color: $yellow;
+      padding-top: px2rem(38px);
+      font-weight: bold;
+    }
+    &.s-c-text{
+      font-size: $fz-12;
+      color: $white;
+      padding-top: px2rem(8px);
+    }
+  }
+}
+.pr-foot-t{
+  padding-top: px2rem(50px);
+  span{
+    color: $white;
+    font-size: $fz-16;
+  }
+  .pl-138{
+    padding-left: px2rem(176px);
+  }
+}
+.getLength{
+  width: px2rem(400px);
+  height: 0;
+}

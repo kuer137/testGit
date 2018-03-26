@@ -1,0 +1,22 @@
+@import "../../../assets/style/praise.scss";
+.pr-bg-img{
+  width: 100%;
+  @extend .fixedAll;
+  background: url("../../../assets/img/praise/homeBg@3x.png") no-repeat top center;
+  height: 100%;
+  background-size: contain;
+}
+.pr-btn-M{
+  @include pr-btn(500px);
+  margin-top: px2rem(900px);
+}
+.pr-foot-t{
+  padding-top: px2rem(50px);
+  span{
+    color: $white;
+    font-size: $fz-16;
+  }
+  .pl-138{
+    padding-left: px2rem(176px);
+  }
+}

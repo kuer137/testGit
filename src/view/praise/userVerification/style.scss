@@ -1,0 +1,84 @@
+@import "../../../assets/style/praise.scss";
+@mixin inputs($width:100%){
+  width: $width;
+  background-color: $white;
+  padding: px2rem(16px) 0;
+  height: px2rem(60px);
+  border: none;
+  border-radius: px2rem(12px);
+  outline: none;
+}
+.pr-icon-c{
+  padding: 0 px2rem(16px) 0 px2rem(26px);
+  width: px2rem(42px);
+  @extend .pr-flex;
+  @include pr-align-center;
+}
+.pr-inp{
+  line-height: px2rem(60px);
+  border: none;
+  font-size: $fz-16;
+}
+.pr-top{
+  height: px2rem(150px);
+  padding: 0 px2rem(44px);
+  font-size: $fz-16;
+  color: $white;
+  @extend .pr-flex;
+  @include pr-align-center;
+  .pr-l{
+    div{
+      padding-left: px2rem(40px);
+    }
+    @extend .pr-flex;
+  }
+}
+.pr-center{
+  padding: px2rem(40px) px2rem(44px) 0;
+  .pr-inp-B{
+    margin-bottom: px2rem(40px);
+    @include inputs(100%);
+    @extend .pr-flex;
+    @include pr-flex-l;
+  };
+  .pr-inp-M{
+    margin-bottom: px2rem(40px);
+    @extend .pr-flex;
+    @include pr-flex-between;
+    .inp-content{
+      @include inputs(px2rem(440px));
+      @extend .pr-flex;
+      @include pr-flex-l;
+      .pr-inp{
+        width: px2rem(340px);
+      }
+    }
+    .pr-btn-S{
+      @include pr-btn(196px,92px,#FDB13C,12px)
+    }
+  }
+  .pr-icon-S{
+    width: px2rem(40px);
+    height: px2rem(48px);
+    display: inline-block;
+    &.one{
+      background: url("../../../assets/img/praise/verifi-one@3x.png") no-repeat center center;
+      background-size: contain;
+    };
+    &.two{
+      background: url("../../../assets/img/praise/verifi-two@3x.png") no-repeat center center;
+      background-size: contain;
+    };
+    &.three{
+      background: url("../../../assets/img/praise/verifi-three@3x.png") no-repeat center center;
+      background-size: contain;
+    };
+    &.four{
+      background: url("../../../assets/img/praise/verifi-four@3x.png") no-repeat center center;
+      background-size: contain;
+    };
+  }
+}
+.pr-btn-All{
+  @include pr-btn(660px,92px,#FDB13C,8px,36px)
+}

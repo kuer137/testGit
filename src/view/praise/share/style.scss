@@ -1,0 +1,32 @@
+@import "../../../assets/style/praise.scss";
+.pr-top{
+  width: px2rem(144px);
+  height: px2rem(144px);
+  background: url("../../../assets/img/praise/share-ok@3x.png") no-repeat center center;
+  background-size: contain;
+  margin-top: px2rem(252px);
+}
+.pr-center{
+  margin-top: px2rem(40px);
+  color: $white;
+  text-align: center;
+  .pr-t{
+    font-size: $fz-16;
+  }
+  .pt-c{
+    font-size: $fz-12;
+    padding-top: px2rem(20px);
+  }
+}
+.pr-bottom{
+  margin-top: px2rem(60px);
+  text-align: center;
+  .pr-t{
+    font-size: $fz-12;
+    color: $pink;
+  }
+  .pr-btn{
+    @include pr-btn(400px,92px,#FDB13C,200px,36px);
+    margin-top: px2rem(24px);
+  }
+}

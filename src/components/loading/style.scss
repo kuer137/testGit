@@ -1,0 +1,62 @@
+.loading_toast {
+  display: block;
+}
+
+.mask_transparent {
+    position: fixed;
+    z-index: 2500;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.toast {
+    position: fixed;
+    z-index: 5001;
+    width: px2rem(244px);
+    min-height: px2rem(244px);
+    top: px2rem(360px);
+    left: 50%;
+    margin-left: 0;
+    transform: translateX(-50%);
+    background: rgba(17, 17, 17, 0.7);
+    text-align: center;
+    border-radius: px2rem(10px);
+    color: #FFFFFF;
+}
+
+.loading_icon_toast {
+    display: inline-block;
+    width: px2rem(76px);
+    height: px2rem(76px);
+    margin: px2rem(60px) 0 0;
+    vertical-align: baseline;
+    animation: Loading 1s steps(12, end) infinite;
+    background: transparent url('./loading.svg') no-repeat;
+    background-size: 100%;
+}
+
+.toast__content {
+    display: block;
+    margin: 0 0 px2rem(30px);
+    line-height: 1.6;
+    font-size: px2rem(32px);
+}
+
+.mask-enter, .mask-leave-active {
+  opacity: 0;
+}
+
+.mask-leave-active, .mask-enter-active {
+  transition: opacity 300ms;
+}
+
+@keyframes Loading {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}

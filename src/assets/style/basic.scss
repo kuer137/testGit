@@ -1,0 +1,52 @@
+$G_designWidth: 750px;
+$G_base: 10px;
+$radidus-6: px2rem(12px);
+$radidus-63: px2rem(126px);
+$height-46: px2rem(92px);
+$mt20: px2rem(40px);
+$fz-16: px2rem(32px);
+$fz-18: px2rem(36px);
+$PF: PingFangSC-Regular;
+$white: #fff;
+$orange: #FF8D1B;
+$disabled: #C2C2C2;
+//适配
+@function px2rem($px, $base-font-size: ($G_designWidth / $G_base)* 1px) {
+    @return ($px / $base-font-size) * 1rem;
+}
+@mixin border-1($color) {
+  border: px2rem(2px) solid $color;
+}
+// 圆角伟6px的框
+@mixin has-radius {
+  @include border-1(#eee);
+  border-radius: $radidus-6;
+}
+// 橙色的按钮-提取公共样式
+@mixin buttom_btn($color) {
+  width: px2rem(260px);
+  height: px2rem(84px);
+  line-height: px2rem(84px);
+  text-align: center;
+  font-size: $fz-16;
+  border-radius: px2rem(126px);
+  color: $white;
+  background-color: $color;
+}
+// 提取条件选择页面中间容器公共样式
+@mixin fix_content($width,$height,$top,$z-index){
+  // position: fixed;
+  display: block;
+  width: $width;
+  height: $height;
+  margin: 0 auto;
+  margin-top: $top;
+  // top: $top;
+  // left: 50%;
+  // transform: translateX(-50%);
+  z-index: $z-index;
+  background: $white;
+  border-radius: px2rem(4px);
+}
+// 颜色定义规范
+$color-blue: linear-gradient(-228deg, #00A7F4 0%, #009BE4 100%);

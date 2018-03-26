@@ -1,0 +1,91 @@
+@import "../../../assets/style/praise.scss";
+.pr-top{
+  height: px2rem(150px);
+  @extend .pr-flex;
+  @include pr-flex-around;
+  div{
+    p{
+      color: $white;
+      text-align: center;
+      &.pr-num{
+        padding-top:px2rem(48px);
+        b{
+          color: $yellow;
+          font-size: $fz-20;
+        };
+      }
+      &.pr-name{
+        font-size: px2rem(54px);
+        padding-top: px2rem(22px);
+      }
+    }
+  }
+}
+.pr-table{
+  background: $white;
+  margin: px2rem(20px) px2rem(20px) px2rem(40px);
+  border-radius: px2rem(10px);
+  .tb-list{
+    height: px2rem(120px);
+    margin: 0 px2rem(30px);
+    border-bottom: 1px solid $line-color;
+    @extend .pr-flex;
+    @include pr-flex-between;
+    .tb-l{
+      @extend .pr-flex;
+      .tb-sort{
+        line-height: px2rem(120px);
+        width: px2rem(100px);
+        text-align: center;
+        @extend .pr-flex;
+        @include pr-align-center;
+        @include pr-flex-center;
+        .lis-sort{
+          &.other{
+            display: inline-block;
+            width: px2rem(42px);
+            height: px2rem(42px);
+            border-radius: 50%;
+            border: 1px solid #C9C9C9;
+            font-size: px2rem(24px);
+            line-height: px2rem(42px);
+          };
+          &.one{
+            background: url("../../../assets/img/praise/panking-one@3x.png") no-repeat center center;
+          };
+          &.two{
+            background: url("../../../assets/img/praise/panking-two@3x.png") no-repeat center center;
+          };
+          &.three{
+            background: url("../../../assets/img/praise/panking-three@3x.png") no-repeat center center;
+          };
+          &.one,&.two,&.three{
+            display: inline-block;
+            width: px2rem(42px);
+            min-height: px2rem(42px);;
+            background-size: contain;
+          }
+        }
+      }
+      .tb-name{
+        height: px2rem(120px);
+        @extend .pr-flex;
+        @include pr-align-center;
+        font-size: $fz-16;
+        .lis-number{
+          font-size: $fz-12;
+          color: $gray;
+          padding-top: px2rem(4px);
+        }
+      }
+    }
+    .pr-number{
+      font-size: $fz-20;
+      font-weight: bold;
+      line-height: px2rem(120px);
+      &.nav-three{
+        color: $purple;
+      }
+    }
+  }
+}

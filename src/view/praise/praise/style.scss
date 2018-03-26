@@ -1,0 +1,64 @@
+@import "../../../assets/style/praise.scss";
+.pr-banner{
+  width: 100%;
+  height: px2rem(270px);
+  display: block;
+  background: url("../../../assets/img/praise/praise-banner@3x.png") no-repeat center top;
+  background-size: contain;
+}
+.pr-content{
+  width: px2rem(670px);
+  height: px2rem(856px);
+  display: block;
+  margin-top: px2rem(40px);
+  background: radial-gradient(#FF817A 37%, #E71F0A 100%);
+  background: -webkit-radial-gradient(#FF817A 37%, #E71F0A 100%);
+  background: -o-radial-gradient(#FF817A 37%, #E71F0A 100%);
+  background: -moz-radial-gradient(#FF817A 37%, #E71F0A 100%);
+}
+.pr-top{
+  @extend .pr-flex;
+  @include pr-flex-center;
+  padding-top: px2rem(46px);
+  .pr-icon{
+    width: px2rem(176px);
+    height: px2rem(44px);
+    display: inline-block;
+    margin: 0 px2rem(20px);
+    &.ll{
+      background: url("../../../assets/img/praise/praise-left@3x.png") no-repeat center right;
+      background-size: contain;
+    }
+    &.rr{
+      background: url("../../../assets/img/praise/praise-right@3x.png") no-repeat center right;
+      background-size: contain;
+    }
+  }
+  .cc{
+    color: $white;
+    font-size: $fz-16;
+  }
+}
+.pr-c-icon{
+  height: px2rem(252px);
+  width: px2rem(192px);
+  background: url("../../../assets/img/praise/praise-zhan@3x.png") no-repeat center center;
+  background-size: contain;
+  margin-top: px2rem(76px);
+}
+.pr-bottom{
+  margin-top: px2rem(16px);
+  color: $white;
+  text-align: center;
+  .pr-name{
+    font-size: px2rem(46px);
+  }
+  .pr-describe{
+    font-size: $fz-12;
+    margin-top: px2rem(70px);
+  }
+  .pr-b-btn{
+    @include pr-btn(400px,92px,#FDB13C,200px,36px);
+    margin-top: px2rem(20px);
+  }
+}
